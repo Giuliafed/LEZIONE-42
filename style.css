@@ -1,0 +1,71 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(79, 153, 153);
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    text-align: center;
+    color: white;
+}
+article img {
+    max-width: 100px;
+}
+article button {
+    cursor: pointer;
+}
+canvas {
+    border: 3px solid blue;
+}
+main {
+    display: flex;
+    justify-content: center;
+}
+.sezione1 {
+    background-color: white;
+    padding: 1rem;
+    margin-right: 1rem;
+}
+a {
+    background-color: rgb(84, 142, 84);
+    padding: 0.5rem;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    margin-top: 1rem;
+    display: inline-block;
+}
+a:hover {
+    background-color: rgb(11, 51, 11);
+}
+
+#text-selection {
+    display: none;
+}
+article {
+    background-color: lightgray;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+#back {
+    background-color: rgb(79, 153, 153);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+#back:hover {
+    background-color: rgb(21, 71, 71);
+}
+#forward {
+    background-color: rgb(79, 153, 153);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+#forward:hover {
+    background-color: rgb(21, 71, 71);
+}
+
