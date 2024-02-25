@@ -35,26 +35,29 @@ function selectImage(image) {
     redrawCanvas(canvasImage,topText,bottomText)
 }
 
-function updateText(text, id){
-    ctx.font = '30px Impact';
-    ctx.fillStyle = 'white';
-    ctx.strokeStyle = 'black';
-    ctx.lineWidth = 2;
-    if(id === 'top-line'){
-    topText = text;
-    } else if (id === 'bottom-line'){
-    bottomText = text;
-    }
-    redrawCanvas(canvasImage,topText,bottomText)
+function updateText (text, id) {
+  ctx.font = '30px Impact'
+  ctx.fillStyle = 'white'
+  ctx.strokeStyle = 'black'
+  ctx.textAlign = 'center'
+  ctx.textRendering = 'optimizeLegibility'
+  ctx.lineWidth = 2
+  if (id === 'top-line') {
+    topText = text
+  } else if (id === 'bottom-line') {
+    bottomText = text
+  }
+  redrawCanvas(canvasImage, topText, bottomText)
 }
 
-function redrawCanvas (image,topText,bottomText){
-    ctx.drawImage(image,0,0,canvas.width,canvas.height);
-    ctx.fillText (topText,50,50);
-    ctx.strokeText(topText,50,50);
-    ctx.fillText (bottomText,50,475);
-    ctx.strokeText(bottomText,50,475);
-
+const CANVAS_WIDTH = 500
+const CANVAS_CENTER_X = CANVAS_WIDTH / 2
+function redrawCanvas (image, topText, bottomText) {
+  ctx.drawImage(image, 0, 0, canvas.width, canvas.height)
+  ctx.fillText(topText, CANVAS_CENTER_X, 50)
+  ctx.strokeText(topText, CANVAS_CENTER_X, 50)
+  ctx.fillText(bottomText, CANVAS_CENTER_X, 475)
+  ctx.strokeText(bottomText, CANVAS_CENTER_X, 475)
 }
 
 function downloadCanvas() {
